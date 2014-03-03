@@ -82,6 +82,7 @@ NeoBundle 'vim-jp/cpp-vim'
 NeoBundle 'justinmk/vim-syntax-extra'
 NeoBundle 'skibyte/gdb-from-vim'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'chase/vim-ansible-yaml'
 
 " Neta Plugins
 "NeoBundle 'rbtnn/puyo.vim'

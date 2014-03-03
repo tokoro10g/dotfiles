@@ -1,3 +1,5 @@
 *.local.vim
 .vim/custom/vimrc/local.vim
 *example*
+*.swp
+*.swo

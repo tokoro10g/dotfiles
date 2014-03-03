@@ -2,6 +2,11 @@
 " key mapping "
 """""""""""""""
 
+" useful when moving between long wrapped lines
+nnoremap j gj
+inoremap k gk
+
+" alias for Esc
 inoremap jj		 <Esc>
 
 "nnoremap <silent> jtn		:tabnext<CR>
@@ -15,6 +20,7 @@ nnoremap jm		:<C-u>Unite build:!<CR>
 
 " select between double-quotations
 nnoremap <leader>" va"
+imap <C-2> ""<Esc>hi
 
 nnoremap <silent> jf		:call Toggle_foldcolumn()<CR>
 function! Toggle_foldcolumn()

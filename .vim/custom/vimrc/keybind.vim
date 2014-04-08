@@ -4,7 +4,7 @@
 
 " useful when moving between long wrapped lines
 nnoremap j gj
-inoremap k gk
+nnoremap k gk
 
 " alias for Esc
 inoremap jj		 <Esc>

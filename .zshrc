@@ -22,7 +22,8 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="vim ~/.zshrc"
 alias open="xdg-open"
 alias :q="exit"
+alias less="/usr/share/vim/vim74/macros/less.sh"
 
 export GOPATH=$HOME/go
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/opt/cross/arm-none-eabi-x-tools/bin:/opt/FriendlyARM/toolschain/4.5.1/bin:$PATH
 export EDITOR='vim'

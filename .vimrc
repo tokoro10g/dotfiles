@@ -33,7 +33,11 @@ NeoBundle 'Shougo/vimproc', {
 			\ }
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimfiler'
-NeoBundle 'Shougo/neocomplete'
+if has('lua')
+	NeoBundle 'Shougo/neocomplete'
+else
+	NeoBundle 'Shougo/neocomplcache'
+endif
 NeoBundle 'Shougo/unite-build'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neosnippet'
@@ -63,7 +67,7 @@ NeoBundle 'Shougo/unite-outline'
 NeoBundle 'jmcantrell/vim-virtualenv'
 NeoBundle 'boolfool/vim-sudden-death'
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
+"NeoBundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'PProvost/vim-markdown-jekyll'
 NeoBundle 'LeafCage/foldCC'
@@ -80,7 +84,7 @@ NeoBundle 'marijnh/tern_for_vim', {
 NeoBundle 'octol/vim-cpp-enhanced-highlight'
 NeoBundle 'vim-jp/cpp-vim'
 NeoBundle 'justinmk/vim-syntax-extra'
-NeoBundle 'skibyte/gdb-from-vim'
+"NeoBundle 'skibyte/gdb-from-vim'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'chase/vim-ansible-yaml'
 

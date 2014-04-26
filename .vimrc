@@ -56,6 +56,7 @@ NeoBundle 'supasorn/vim-easymotion'
 NeoBundle 'rhysd/clever-f.vim'
 "NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-pathogen'
 NeoBundle 'osyo-manga/unite-quickfix'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'tokoro10g/TweetVim'
@@ -87,6 +88,17 @@ NeoBundle 'justinmk/vim-syntax-extra'
 "NeoBundle 'skibyte/gdb-from-vim'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'chase/vim-ansible-yaml'
+NeoBundle 'davidhalter/jedi-vim', {
+			\ 'autoload': {
+			\   'filetypes': ['python', 'python3', 'djangohtml'],
+			\ },
+			\ 'build': {
+			\   'mac': 'pip install jedi',
+			\   'unix': 'pip install jedi',
+			\}}
+NeoBundle 'sophacles/vim-bundle-mako'
+NeoBundle 'amirh/HTML-AutoCloseTag'
+NeoBundle 'edsono/vim-matchit'
 
 " Neta Plugins
 "NeoBundle 'rbtnn/puyo.vim'

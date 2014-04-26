@@ -36,3 +36,8 @@ nnoremap jo		:<C-u>Unite outline<CR>
 
 " cd to the directory of current file
 nnoremap cd :cd %:p:h<CR>:pwd<CR>
+
+cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
+cnoremap <expr> ? getcmdtype() == '?' ? '\?' : '?'
+
+vnoremap v $h

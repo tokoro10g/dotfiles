@@ -22,7 +22,6 @@ let g:clang_user_options='-std=c++11 ' .
 			\'-I/usr/include/qt5/QtWidgets '.
 			\' -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I/usr/share/qt5/mkspecs/linux-g++ '.
 			\'-include malloc.h '
-let g:clang_library_path='/usr/local/lib'
 let g:clang_complete_macros=1
 let g:clang_complete_patterns=1
 

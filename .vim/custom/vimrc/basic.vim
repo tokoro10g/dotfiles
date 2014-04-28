@@ -29,8 +29,21 @@ set relativenumber
 set tabstop=4
 set shiftwidth=4
 
+set ignorecase
+set smartcase
+set infercase
+set incsearch
+set hlsearch
+
+set showmatch
+set matchpairs& matchpairs+=<:>
+
+set nowritebackup
+set nobackup
+set noswapfile
+
 set list
-set listchars=tab:>-
+set listchars=tab:>-,trail:-,nbsp:%,eol:$
 
 set foldmethod=manual
 let g:foldcolumn_enabled_columns=5

@@ -68,7 +68,7 @@ NeoBundle 'Shougo/unite-outline'
 NeoBundle 'jmcantrell/vim-virtualenv'
 NeoBundle 'boolfool/vim-sudden-death'
 NeoBundle 'thinca/vim-quickrun'
-"NeoBundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
+"NeoBundle 'gerw/vim-latex-suite'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'PProvost/vim-markdown-jekyll'
 NeoBundle 'LeafCage/foldCC'
@@ -99,6 +99,7 @@ NeoBundle 'davidhalter/jedi-vim', {
 NeoBundle 'sophacles/vim-bundle-mako'
 NeoBundle 'amirh/HTML-AutoCloseTag'
 NeoBundle 'edsono/vim-matchit'
+NeoBundle 'fuenor/im_control.vim'
 
 " Neta Plugins
 "NeoBundle 'rbtnn/puyo.vim'

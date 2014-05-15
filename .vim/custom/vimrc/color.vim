@@ -10,4 +10,3 @@ hi SyntasticWarningLine guibg=#E6DB74
 hi Normal ctermbg=NONE
 
 syntax on
-

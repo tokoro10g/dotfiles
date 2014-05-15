@@ -37,11 +37,14 @@ if has('lua')
 	NeoBundle 'Shougo/neocomplete'
 else
 	NeoBundle 'Shougo/neocomplcache'
+	NeoBundle 'JazzCore/neocomplcache-ultisnips'
 endif
 NeoBundle 'Shougo/unite-build'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'
+"NeoBundle 'Shougo/neosnippet'
+"NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'Rip-Rip/clang_complete'
 NeoBundle 'jelera/vim-javascript-syntax'
@@ -66,7 +69,6 @@ NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'mattn/favstar-vim'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'jmcantrell/vim-virtualenv'
-NeoBundle 'boolfool/vim-sudden-death'
 NeoBundle 'thinca/vim-quickrun'
 "NeoBundle 'gerw/vim-latex-suite'
 NeoBundle 'plasticboy/vim-markdown'
@@ -100,10 +102,12 @@ NeoBundle 'sophacles/vim-bundle-mako'
 NeoBundle 'amirh/HTML-AutoCloseTag'
 NeoBundle 'edsono/vim-matchit'
 NeoBundle 'fuenor/im_control.vim'
+NeoBundle 'tokoro10g/matx-vim'
 
 " Neta Plugins
 "NeoBundle 'rbtnn/puyo.vim'
 "NeoBundle 'thinca/vim-portal'
+"NeoBundle 'boolfool/vim-sudden-death'
 
 if neobundle#exists_not_installed_bundles()
 	echomsg 'Not installed bundles : ' .

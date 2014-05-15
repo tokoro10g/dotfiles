@@ -71,3 +71,5 @@ endfunction
 if has('conceal')
 	set conceallevel=2 concealcursor=iv
 endif
+
+set ambiwidth=double

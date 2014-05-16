@@ -67,9 +67,8 @@ function! s:write_check_typo(file)
 	endif
 endfunction
 
-" fix for neosnippet
 if has('conceal')
-	set conceallevel=2 concealcursor=iv
+	set conceallevel=2 concealcursor=
 endif
 
 set ambiwidth=double

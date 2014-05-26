@@ -29,14 +29,8 @@ endfunction
 
 au FileType tweetvim_say call s:tweetvim_say_keybind()
 function! s:tweetvim_say_keybind()
-	let s:tweetvim_root_dir="~/.vim/bundle/TweetVim/"
-	let g:F_show_history=scriptid#GetFunc(s:tweetvim_root_dir.'autoload/tweetvim/say.vim','show_history')
-	let g:F_post_buffer_tweet=scriptid#GetFunc(s:tweetvim_root_dir.'autoload/tweetvim/say.vim','post_buffer_tweet')
 	nnoremap <buffer> <silent> q :bd!<CR>
-	nnoremap <buffer> <silent> <C-s>      :call g:F_show_history()<CR>
-	inoremap <buffer> <silent> <C-s> <ESC>:call g:F_show_history()<CR>
-	nnoremap <buffer> <silent> <C-CR>       :call g:F_post_buffer_tweet()<CR>
-	inoremap <buffer> <silent> <C-CR>       <ESC>:call F_post_buffer_tweet()<CR>
+	inoremap <buffer> <silent> <C-CR> <ESC><CR>
 
 	inoremap <buffer> <silent> <C-i> <ESC>:call unite#sources#tweetvim_tweet_history#start()<CR>
 	nnoremap <buffer> <silent> <C-i> <ESC>:call unite#sources#tweetvim_tweet_history#start()<CR>

@@ -7,12 +7,6 @@
 set nocompatible
 filetype off
 
-" Custom settings
-set runtimepath+=~/.vim/custom
-runtime! custom/vimrc/*.vim
-runtime! custom/vimrc/plugin/*.vim
-runtime! custom/vimrc/plugin/keybind/*.vim
-
 """""""""""
 " Bundles "
 """""""""""
@@ -62,7 +56,6 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-pathogen'
 NeoBundle 'osyo-manga/unite-quickfix'
 NeoBundle 'mattn/webapi-vim'
-NeoBundle 'tokoro10g/TweetVim'
 NeoBundle 'tokoro10g/vim-miscmisc'
 NeoBundle 'basyura/twibill.vim'
 NeoBundle 'tyru/open-browser.vim'
@@ -105,9 +98,19 @@ NeoBundle 'fuenor/im_control.vim'
 NeoBundle 'tokoro10g/matx-vim'
 
 " Neta Plugins
+NeoBundle 'supermomonga/shaberu.vim'
 "NeoBundle 'rbtnn/puyo.vim'
 "NeoBundle 'thinca/vim-portal'
 "NeoBundle 'boolfool/vim-sudden-death'
+
+" TweetVim
+NeoBundleLazy 'basyura/TweetVim'
+
+" Custom settings
+set runtimepath+=~/.vim/custom
+runtime! custom/vimrc/*.vim
+runtime! custom/vimrc/plugin/*.vim
+runtime! custom/vimrc/plugin/keybind/*.vim
 
 if neobundle#exists_not_installed_bundles()
 	echomsg 'Not installed bundles : ' .

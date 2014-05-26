@@ -7,37 +7,17 @@ nnoremap j gj
 nnoremap k gk
 
 " alias for Esc
-inoremap jj		 <Esc>
-
-"nnoremap <silent> jtn		:tabnext<CR>
-"nnoremap <silent> jtp		:tabprev<CR>
-"nnoremap <silent> jtw		:tabnew<CR>
-"inoremap <silent> jtn		<Esc>:tabnext<CR>i
-"inoremap <silent> jtp		<Esc>:tabprev<CR>i
-"inoremap <silent> jtw		<Esc>:tabnew<CR>
-
-nnoremap jm		:<C-u>Unite build:!<CR>
+inoremap jj <Esc>
 
 " select between double-quotations
-nnoremap <leader>" va"
-imap <C-2> ""<Esc>hi
-
-nnoremap <silent> jf		:call Toggle_foldcolumn()<CR>
-function! Toggle_foldcolumn()
-	let state=&foldcolumn
-	if state==0
-		let &foldcolumn=g:foldcolumn_enabled_columns
-	else
-		let &foldcolumn=0
-	endif
-endfunction
-
-nnoremap jo		:<C-u>Unite outline<CR>
+nnoremap m" va"
 
 " cd to the directory of current file
 nnoremap cd :cd %:p:h<CR>:pwd<CR>
 
+" automatically escape / and ? in command mode
 cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
 cnoremap <expr> ? getcmdtype() == '?' ? '\?' : '?'
 
+" vv to select to the end of line
 vnoremap v $h

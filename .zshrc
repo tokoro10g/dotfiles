@@ -28,5 +28,7 @@ export GEM_PATH=$HOME/.gems:/usr/lib/ruby/gems/1.8
 export GOPATH=$HOME/go
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.gems/bin:$PATH
 export EDITOR='vim'
+export KIGITHUB=https://github.com/KiCad
+export EGMOD=$HOME/.eagle/lbr
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local

@@ -35,7 +35,7 @@ set infercase
 set incsearch
 set hlsearch
 
-set showmatch
+"set showmatch
 set matchpairs& matchpairs+=<:>
 
 set nowritebackup

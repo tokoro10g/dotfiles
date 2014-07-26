@@ -23,12 +23,9 @@ alias zshconfig="vim ~/.zshrc"
 alias open="xdg-open"
 alias :q="exit"
 
-export GEM_HOME=$HOME/.gems
-export GEM_PATH=$HOME/.gems:/usr/lib/ruby/gems/2.1.0
 export GOPATH=$HOME/go
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.gem/ruby/2.1.0/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 export EDITOR='vim'
 export KIGITHUB=https://github.com/KiCad
-export EGMOD=$HOME/.eagle/lbr
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local

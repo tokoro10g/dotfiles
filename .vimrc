@@ -40,9 +40,16 @@ NeoBundle 'honza/vim-snippets'
 "NeoBundle 'Shougo/neosnippet'
 "NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'groenewege/vim-less'
-NeoBundle 'Rip-Rip/clang_complete'
+NeoBundle 'Rip-Rip/clang_complete', {
+			\ 'build' : {
+			\ 'windows' : "make",
+			\ 'cygwin' : "make",
+			\ 'mac' : "make",
+			\ 'unix' : "make",
+			\ },
+			\ }
 NeoBundle 'jelera/vim-javascript-syntax'
-NeoBundle 'spolu/dwm.vim','b7b2b75094bdb589c539952d3dd114f9f15b7ddd'
+NeoBundle 'spolu/dwm.vim'
 NeoBundle 'kannokanno/unite-dwm'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'lilydjwg/colorizer'
@@ -116,6 +123,11 @@ if neobundle#exists_not_installed_bundles()
 	echomsg 'Not installed bundles : ' .
 				\string(neobundle#get_not_installed_bundle_names())
 	echomsg 'Please execute ":NeoBundleInstall" command.'
+endif
+
+if filereadable(".local.vim")
+	echomsg 'Loading local vim file'
+	source .local.vim
 endif
 
 " finally

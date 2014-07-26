@@ -103,6 +103,7 @@ NeoBundle 'amirh/HTML-AutoCloseTag'
 NeoBundle 'edsono/vim-matchit'
 NeoBundle 'fuenor/im_control.vim'
 NeoBundle 'tokoro10g/matx-vim'
+NeoBundle 'embear/vim-localvimrc'
 
 " Neta Plugins
 NeoBundle 'supermomonga/shaberu.vim'
@@ -123,11 +124,6 @@ if neobundle#exists_not_installed_bundles()
 	echomsg 'Not installed bundles : ' .
 				\string(neobundle#get_not_installed_bundle_names())
 	echomsg 'Please execute ":NeoBundleInstall" command.'
-endif
-
-if filereadable(".local.vim")
-	echomsg 'Loading local vim file'
-	source .local.vim
 endif
 
 " finally

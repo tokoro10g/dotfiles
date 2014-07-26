@@ -1,0 +1,1 @@
+cp -rs `pwd`/.[^.]* $HOME

@@ -104,6 +104,11 @@ NeoBundle 'edsono/vim-matchit'
 NeoBundle 'fuenor/im_control.vim'
 NeoBundle 'tokoro10g/matx-vim'
 NeoBundle 'embear/vim-localvimrc'
+NeoBundleLazy 'peterhoeg/vim-qml', {
+			\	'autoload' : {
+			\		'filetypes' : ['qml'],
+			\	},
+			\}
 
 " Neta Plugins
 NeoBundle 'supermomonga/shaberu.vim'

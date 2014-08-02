@@ -22,5 +22,11 @@ let g:quickrun_config={
 		\"cmdopt" : "-e 'main()'",
 		\'hook/cd/directory': '%S:p:h'
 	\},
+	\"qml/qmlscene" : {
+	\	'command' : 'qmlscene',
+	\	'exec'    : '%c %s:p',
+	\	'runner'  : 'vimproc',
+	\},
 \}
+let g:quickrun_config['qml'] = g:quickrun_config['qml/qmlscene']
 

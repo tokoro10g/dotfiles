@@ -109,6 +109,7 @@ NeoBundleLazy 'peterhoeg/vim-qml', {
 			\		'filetypes' : ['qml'],
 			\	},
 			\}
+NeoBundleLazy 'mfumi/unite-mpc'
 
 " Neta Plugins
 NeoBundle 'supermomonga/shaberu.vim'

@@ -9,4 +9,6 @@ hi SyntasticWarningSign guifg=#FFFFFF guibg=#E6DB74
 hi SyntasticWarningLine guibg=#E6DB74
 hi Normal ctermbg=NONE
 
+au FileType tex hi Conceal guifg=#FFFFFF guibg=#444444
+
 syntax on

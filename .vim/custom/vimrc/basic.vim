@@ -71,4 +71,4 @@ if has('conceal')
 	set conceallevel=2 concealcursor=
 endif
 
-set ambiwidth=double
+"set ambiwidth=double

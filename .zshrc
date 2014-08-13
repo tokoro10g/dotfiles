@@ -20,6 +20,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 alias zshconfig="vim ~/.zshrc"
+alias vimrc="vim ~/.vimrc"
 alias open="xdg-open"
 alias :q="exit"
 

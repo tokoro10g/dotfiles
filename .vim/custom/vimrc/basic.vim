@@ -19,6 +19,7 @@ let $TMPDIR = $HOME."/tmp"
 filetype plugin on
 filetype indent on
 
+set showcmd
 set laststatus=2
 set showtabline=2
 set backspace=2

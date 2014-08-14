@@ -59,6 +59,7 @@ NeoBundle 'surround.vim'
 NeoBundle 'supasorn/vim-easymotion'
 NeoBundle 'rhysd/clever-f.vim'
 "NeoBundle 'scrooloose/syntastic'
+NeoBundle 'osyo-manga/vim-watchdogs'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-pathogen'
 NeoBundle 'osyo-manga/unite-quickfix'
@@ -129,6 +130,7 @@ if neobundle#tap('jazzradio.vim')
 				\	}
 				\})
 endif
+NeoBundle 'octave.vim--'
 
 " Neta Plugins
 NeoBundle 'supermomonga/shaberu.vim'

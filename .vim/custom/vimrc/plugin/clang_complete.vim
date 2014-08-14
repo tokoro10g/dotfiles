@@ -10,8 +10,8 @@ let g:clang_trailing_placeholder=1
 let g:clang_close_preview=0
 let g:clang_user_options='-std=c++11 ' .
 			\'-I/usr/include '.
-			\'-I/usr/include/c++/4.9.0 '.
-			\'-I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.0/include '.
+			\'-I/usr/include/c++/4.9.1 '.
+			\'-I/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.1/include '.
 			\'-include malloc.h '
 let g:clang_complete_macros=1
 let g:clang_complete_patterns=1

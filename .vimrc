@@ -48,12 +48,21 @@ NeoBundle 'Rip-Rip/clang_complete', {
 			\ 'unix' : "make",
 			\ },
 			\ }
-NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundleLazy 'jelera/vim-javascript-syntax', {
+			\	'autoload' : {
+			\		'filetypes' : ['javascript'],
+			\	},
+			\}
+NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {
+			\	'autoload' : {
+			\		'filetypes' : ['javascript'],
+			\	},
+			\}
 NeoBundle 'spolu/dwm.vim'
 NeoBundle 'kannokanno/unite-dwm'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'lilydjwg/colorizer'
-NeoBundle 'pasela/unite-webcolorname'
+"NeoBundle 'pasela/unite-webcolorname'
 NeoBundle 'osyo-manga/vim-anzu'
 NeoBundle 'surround.vim'
 NeoBundle 'supasorn/vim-easymotion'
@@ -63,11 +72,7 @@ NeoBundle 'osyo-manga/vim-watchdogs'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-pathogen'
 NeoBundle 'osyo-manga/unite-quickfix'
-NeoBundle 'mattn/webapi-vim'
 NeoBundle 'tokoro10g/vim-miscmisc'
-NeoBundle 'basyura/twibill.vim'
-NeoBundle 'tyru/open-browser.vim'
-NeoBundle 'mattn/favstar-vim'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'jmcantrell/vim-virtualenv'
 NeoBundle 'thinca/vim-quickrun'
@@ -77,21 +82,32 @@ NeoBundle 'PProvost/vim-markdown-jekyll'
 NeoBundle 'LeafCage/foldCC'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'kana/vim-textobj-indent'
-NeoBundle 'Shougo/context_filetype.vim'
+NeoBundleLazy 'Shougo/context_filetype.vim'
 NeoBundle 'osyo-manga/vim-precious'
 NeoBundle 'othree/html5.vim'
-NeoBundle 'othree/javascript-libraries-syntax.vim'
 NeoBundle 'marijnh/tern_for_vim', {
 			\ 'build': {
 			\   'others': 'npm install'
 			\}}
-NeoBundle 'octol/vim-cpp-enhanced-highlight'
-NeoBundle 'vim-jp/cpp-vim'
+NeoBundleLazy 'octol/vim-cpp-enhanced-highlight', {
+			\	'autoload' : {
+			\		'filetypes' : ['cpp'],
+			\	},
+			\}
+NeoBundleLazy 'vim-jp/cpp-vim', {
+			\	'autoload' : {
+			\		'filetypes' : ['cpp'],
+			\	},
+			\}
 NeoBundle 'justinmk/vim-syntax-extra'
 "NeoBundle 'skibyte/gdb-from-vim'
-NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'vim-ruby/vim-ruby', {
+			\	'autoload' : {
+			\		'filetypes' : ['ruby', 'erb'],
+			\	},
+			\}
 NeoBundle 'chase/vim-ansible-yaml'
-NeoBundle 'davidhalter/jedi-vim', {
+NeoBundleLazy 'davidhalter/jedi-vim', {
 			\ 'autoload': {
 			\   'filetypes': ['python', 'python3', 'djangohtml'],
 			\ },
@@ -100,7 +116,11 @@ NeoBundle 'davidhalter/jedi-vim', {
 			\   'unix': 'pip install jedi',
 			\}}
 NeoBundle 'sophacles/vim-bundle-mako'
-NeoBundle 'amirh/HTML-AutoCloseTag'
+NeoBundleLazy 'amirh/HTML-AutoCloseTag', {
+			\	'autoload' : {
+			\		'filetypes' : ['html'],
+			\	},
+			\}
 NeoBundle 'edsono/vim-matchit'
 NeoBundle 'fuenor/im_control.vim'
 NeoBundle 'tokoro10g/matx-vim'
@@ -131,6 +151,7 @@ if neobundle#tap('jazzradio.vim')
 				\})
 endif
 NeoBundle 'octave.vim--'
+NeoBundle 'osyo-manga/vim-over'
 
 " Neta Plugins
 NeoBundle 'supermomonga/shaberu.vim'
@@ -139,6 +160,10 @@ NeoBundle 'supermomonga/shaberu.vim'
 "NeoBundle 'boolfool/vim-sudden-death'
 
 " TweetVim
+NeoBundleLazy 'mattn/webapi-vim'
+NeoBundleLazy 'basyura/twibill.vim'
+NeoBundleLazy 'tyru/open-browser.vim'
+NeoBundleLazy 'mattn/favstar-vim'
 NeoBundleLazy 'basyura/TweetVim'
 
 " Custom settings

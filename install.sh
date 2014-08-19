@@ -1,1 +1,1 @@
-cp -rs `pwd`/.[^.]* $HOME
+cp -rs `pwd`/.[^.(git)]* $HOME

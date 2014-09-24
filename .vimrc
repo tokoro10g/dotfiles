@@ -1,7 +1,6 @@
 """"""""""""""""""""""""""""""""
 " .vimrc                       "
 "         Tokoro (@tokoro10g)  "
-" Last modified: Sep. 11. 2013 "
 """"""""""""""""""""""""""""""""
 
 set nocompatible

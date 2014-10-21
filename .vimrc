@@ -34,6 +34,7 @@ else
 endif
 NeoBundle 'Shougo/unite-build'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neossh.vim'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 "NeoBundle 'Shougo/neosnippet'
@@ -176,6 +177,8 @@ if neobundle#exists_not_installed_bundles()
 				\string(neobundle#get_not_installed_bundle_names())
 	echomsg 'Please execute ":NeoBundleInstall" command.'
 endif
+
+let g:unite_source_ssh_enable_debug=1
 
 " finally
 syntax on

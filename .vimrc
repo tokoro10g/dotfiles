@@ -3,18 +3,20 @@
 "         Tokoro (@tokoro10g)  "
 """"""""""""""""""""""""""""""""
 
-set nocompatible
-filetype off
+if !1 | finish | endif
 
 """""""""""
 " Bundles "
 """""""""""
 " Using NeoBundle Environment
 if has('vim_starting')
+	set nocompatible
 	set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/vimproc', {
 			\ 'build' : {
@@ -35,19 +37,24 @@ endif
 NeoBundle 'Shougo/unite-build'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neossh.vim'
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'honza/vim-snippets'
 "NeoBundle 'Shougo/neosnippet'
 "NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'
 NeoBundle 'groenewege/vim-less'
-NeoBundle 'Rip-Rip/clang_complete', {
-			\ 'build' : {
-			\ 'windows' : "make",
-			\ 'cygwin' : "make",
-			\ 'mac' : "make",
-			\ 'unix' : "make",
-			\ },
-			\ }
+NeoBundle 'octol/vim-cpp-enhanced-highlight'
+NeoBundle 'vim-jp/cpp-vim'
+NeoBundleLazy 'Rip-Rip/clang_complete', {
+			\	'autoload': {
+			\		'filetypes' : ["c","cpp"]
+			\	},
+			\	'build' : {
+			\		'windows' : "make",
+			\		'cygwin' : "make",
+			\		'mac' : "make",
+			\		'unix' : "make",
+			\	},
+			\}
 NeoBundleLazy 'jelera/vim-javascript-syntax', {
 			\	'autoload' : {
 			\		'filetypes' : ['javascript'],
@@ -89,16 +96,6 @@ NeoBundle 'marijnh/tern_for_vim', {
 			\ 'build': {
 			\   'others': 'npm install'
 			\}}
-NeoBundleLazy 'octol/vim-cpp-enhanced-highlight', {
-			\	'autoload' : {
-			\		'filetypes' : ['cpp'],
-			\	},
-			\}
-NeoBundleLazy 'vim-jp/cpp-vim', {
-			\	'autoload' : {
-			\		'filetypes' : ['cpp'],
-			\	},
-			\}
 NeoBundle 'justinmk/vim-syntax-extra'
 "NeoBundle 'skibyte/gdb-from-vim'
 NeoBundle 'vim-ruby/vim-ruby', {
@@ -166,19 +163,15 @@ NeoBundleLazy 'tyru/open-browser.vim'
 NeoBundleLazy 'mattn/favstar-vim'
 NeoBundleLazy 'basyura/TweetVim'
 
+call neobundle#end()
+
 " Custom settings
 set runtimepath+=~/.vim/custom
 runtime! custom/vimrc/*.vim
 runtime! custom/vimrc/plugin/*.vim
 runtime! custom/vimrc/plugin/keybind/*.vim
 
-if neobundle#exists_not_installed_bundles()
-	echomsg 'Not installed bundles : ' .
-				\string(neobundle#get_not_installed_bundle_names())
-	echomsg 'Please execute ":NeoBundleInstall" command.'
-endif
-
-let g:unite_source_ssh_enable_debug=1
+NeoBundleCheck
 
 " finally
 syntax on

@@ -26,7 +26,7 @@ set backspace=2
 set autoindent
 set timeoutlen=200
 set completeopt=menuone
-set relativenumber
+set number
 set tabstop=4
 set shiftwidth=4
 

@@ -14,7 +14,7 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="mm/dd/yyyy"
 
 # Load plugins
-plugins=(git vi-mode archlinux compleat command-not-found )
+plugins=(git vi-mode compleat command-not-found )
 
 source $ZSH/oh-my-zsh.sh
 

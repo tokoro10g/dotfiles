@@ -118,6 +118,11 @@ NeoBundleLazy 'amirh/HTML-AutoCloseTag', {
 			\		'filetypes' : ['html'],
 			\	},
 			\}
+NeoBundleLazy 'vim-scripts/openscad.vim', {
+			\	'autoload' : {
+			\		'filetypes' : ['openscad'],
+			\	},
+			\}
 NeoBundle 'edsono/vim-matchit'
 NeoBundle 'fuenor/im_control.vim'
 NeoBundle 'tokoro10g/matx-vim'

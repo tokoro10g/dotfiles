@@ -155,6 +155,8 @@ endif
 NeoBundle 'octave.vim--'
 NeoBundle 'osyo-manga/vim-over'
 
+NeoBundle 'deton/jasegment.vim'
+
 " Neta Plugins
 NeoBundle 'supermomonga/shaberu.vim'
 "NeoBundle 'rbtnn/puyo.vim'

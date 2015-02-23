@@ -1,0 +1,76 @@
+status	key	command
+Composition	Backspace	Backspace
+Composition	Ctrl Backspace	Backspace
+Composition	Ctrl Enter	Commit
+Composition	Ctrl Space	IMEOff
+Composition	Delete	Delete
+Composition	Down	MoveCursorToEnd
+Composition	End	MoveCursorToEnd
+Composition	Enter	Commit
+Composition	ESC	Cancel
+Composition	F10	ConvertToHalfAlphanumeric
+Composition	F2	ConvertWithoutHistory
+Composition	F6	ConvertToHiragana
+Composition	F7	ConvertToFullKatakana
+Composition	F8	ConvertToHalfWidth
+Composition	F9	ConvertToFullAlphanumeric
+Composition	Home	MoveCursorToBeginning
+Composition	Left	MoveCursorLeft
+Composition	Right	MoveCursorRight
+Composition	Space	Convert
+Composition	Tab	PredictAndConvert
+Conversion	Backspace	Cancel
+Conversion	Ctrl Enter	Commit
+Conversion	Ctrl h	SegmentWidthShrink
+Conversion	Ctrl Space	IMEOff
+Conversion	Delete	Cancel
+Conversion	Down	ConvertNext
+Conversion	End	SegmentFocusLast
+Conversion	Enter	Commit
+Conversion	ESC	Cancel
+Conversion	F10	ConvertToHalfAlphanumeric
+Conversion	F6	ConvertToHiragana
+Conversion	F7	ConvertToFullKatakana
+Conversion	F8	ConvertToHalfWidth
+Conversion	F9	ConvertToFullAlphanumeric
+Conversion	Home	SegmentFocusFirst
+Conversion	Left	SegmentFocusLeft
+Conversion	Right	SegmentFocusRight
+Conversion	Shift Left	SegmentWidthShrink
+Conversion	Shift Right	SegmentWidthExpand
+Conversion	Space	ConvertNext
+Conversion	Tab	PredictAndConvert
+Conversion	Up	ConvertPrev
+DirectInput	Hankaku/Zenkaku	IMEOn
+Precomposition	Backspace	Revert
+Precomposition	Ctrl Shift Space	InsertFullSpace
+Precomposition	Shift Space	InsertAlternateSpace
+Precomposition	Space	InsertSpace
+Suggestion	Down	PredictAndConvert
+Suggestion	Shift Enter	CommitFirstSuggestion
+DirectInput	Ctrl Space	IMEOn
+Precomposition	Ctrl Space	IMEOff
+Suggestion	Ctrl Space	IMEOff
+Prediction	Ctrl Space	IMEOff
+Composition	Ctrl h	MoveCursorLeft
+Composition	Ctrl l	MoveCursorRight
+Conversion	Ctrl l	SegmentWidthExpand
+DirectInput	Muhenkan	IMEOn
+Precomposition	Muhenkan	IMEOff
+Suggestion	Muhenkan	IMEOff
+Prediction	Muhenkan	IMEOff
+Conversion	Ctrl w	MoveCursorLeft
+Conversion	Ctrl b	MoveCursorRight
+Composition	ASCII	InsertCharacter
+Composition	Kanji	IMEOff
+Composition	OFF	IMEOff
+Composition	ON	IMEOn
+Conversion	Kanji	IMEOff
+Conversion	OFF	IMEOff
+Conversion	ON	IMEOn
+DirectInput	Kanji	IMEOn
+DirectInput	ON	IMEOn
+Precomposition	ASCII	InsertCharacter
+Precomposition	Kanji	IMEOff
+Precomposition	OFF	IMEOff
+Precomposition	ON	IMEOn

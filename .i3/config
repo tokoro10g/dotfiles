@@ -18,18 +18,20 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-font pango:open Sans Mono 8
+font pango:Ubuntu Regular 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
+# assign some applications
+assign [class="Firefox"] 2:web
+assign [class="Thunderbird"] 2:web
+assign [class="com-mathworks-.*"] 6:lab
 
 # auto start
 exec --no-startup-id nm-applet
 exec --no-startup-id ~/setbg.sh
 exec --no-startup-id fcitx
-
-bindsym $mod+F12 exec --no-startup-id scrot 'scrot_%Y%m%d_%I:%M:%S_%p.png' -e 'mv $f ~/Pictures/screenshot/'
-bindsym $mod+Shift+F12 exec sleep 0.2 && scrot -s 'scrot_%Y%m%d_%I:%M:%S_%p.png' -e 'mv $f ~/Pictures/screenshot/'
 
 # start a terminal
 bindsym $mod+Shift+Return exec mlterm
@@ -56,19 +58,23 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-# split in horizontal orientation
-bindsym $mod+comma split h
+# resize focused window
+bindsym $mod+Control+h resize shrink width 10 px or 10 ppt
+bindsym $mod+Control+j resize grow height 10 px or 10 ppt
+bindsym $mod+Control+k resize shrink height 10 px or 10 ppt
+bindsym $mod+Control+l resize grow width 10 px or 10 ppt
 
-# split in vertical orientation
-bindsym $mod+period split v
+# split in horizontal / vertical orientation
+bindsym $mod+c split h
+bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+d layout tabbed
+bindsym $mod+a layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -76,11 +82,10 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
+# focus the child / parent container
+# like 'i' and 'o' stands for 'in' and 'out'
+bindsym $mod+i focus child
+bindsym $mod+o focus parent
 
 # switch to workspace
 bindsym $mod+1 workspace 1:work
@@ -106,14 +111,34 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+# handle workspaces for multiple screens (xmonad-like behavior)
+bindsym $mod+w focus output left
+bindsym $mod+e focus output right
+bindsym $mod+Shift+w move workspace to output left
+bindsym $mod+Shift+e move workspace to output right
+
 # reload the configuration file
 bindsym $mod+Shift+r reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+s restart
+bindsym $mod+Shift+asciitilde restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -f 'pango:Ubuntu Regular 10' -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+q exec "i3-nagbar -t warning -f 'pango:Ubuntu Regular 10' -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+
+# modify sound volume
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle
+
+# lock screen
+bindsym Control+mod1+l exec i3lock-fancy
+
+# take screenshots
+bindsym $mod+F12 exec --no-startup-id scrot 'scrot_%Y%m%d_%I:%M:%S_%p.png' -e 'mv $f ~/Pictures/screenshot/'
+bindsym $mod+Shift+F12 exec sleep 0.2 && scrot -s 'scrot_%Y%m%d_%I:%M:%S_%p.png' -e 'mv $f ~/Pictures/screenshot/'
 
 # resize window (you can also use the mouse for that)
+bindsym $mod+r mode "resize"
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
         bindsym h resize shrink width 10 px or 10 ppt
@@ -126,15 +151,13 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
-
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
 	status_command conky -c $HOME/.i3/conkyrc
 		mode dock
 		position top
-		font pango:Droid Sans 8
+		font pango:Ubuntu Regular 9
 		colors {
 			background #2d2d2d
 				statusline #dedede
@@ -160,10 +183,7 @@ bindsym Control+Shift+x [class="^.*"] border toggle
 for_window [class="^.*"] border pixel 1
 for_window [class="mlterm"] border normal
 
-# xmodmap ~/.Xmodmap &
-
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle
-
-bindsym Control+mod1+l exec i3lock-fancy
+# start applications
+exec firefox
+exec thunderbird
+exec sleep 0.5; mlterm

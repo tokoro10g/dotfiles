@@ -157,6 +157,8 @@ NeoBundle 'osyo-manga/vim-over'
 
 NeoBundle 'deton/jasegment.vim'
 
+NeoBundle 'sudo.vim'
+
 " Neta Plugins
 NeoBundle 'supermomonga/shaberu.vim'
 "NeoBundle 'rbtnn/puyo.vim'

@@ -114,8 +114,8 @@ bindsym $mod+Shift+0 move container to workspace 10
 # handle workspaces for multiple screens (xmonad-like behavior)
 bindsym $mod+w focus output left
 bindsym $mod+e focus output right
-bindsym $mod+Shift+w move workspace to output left
-bindsym $mod+Shift+e move workspace to output right
+bindsym $mod+Shift+w move container to output left
+bindsym $mod+Shift+e move container to output right
 
 # reload the configuration file
 bindsym $mod+Shift+r reload

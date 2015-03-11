@@ -23,6 +23,8 @@ font pango:Ubuntu Regular 9
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+for_window [class="MATLAB.*" instance="sun-awt-X11-XFramePeer"] floating enable
+
 # assign some applications
 assign [class="Firefox"] 2:web
 assign [class="Thunderbird"] 2:web
@@ -126,8 +128,8 @@ bindsym $mod+Shift+q exec "i3-nagbar -t warning -f 'pango:Ubuntu Regular 10' -m 
 
 
 # modify sound volume
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 2%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 2%- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
 
 # lock screen

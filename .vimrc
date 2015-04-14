@@ -84,8 +84,10 @@ NeoBundle 'Shougo/unite-outline'
 NeoBundle 'jmcantrell/vim-virtualenv'
 NeoBundle 'thinca/vim-quickrun'
 "NeoBundle 'gerw/vim-latex-suite'
+NeoBundle 'godlygeek/tabular'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'PProvost/vim-markdown-jekyll'
+NeoBundle 'suan/vim-instant-markdown'
 NeoBundle 'LeafCage/foldCC'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'kana/vim-textobj-indent'
@@ -97,13 +99,12 @@ NeoBundle 'marijnh/tern_for_vim', {
 			\   'others': 'npm install'
 			\}}
 NeoBundle 'justinmk/vim-syntax-extra'
-"NeoBundle 'skibyte/gdb-from-vim'
 NeoBundle 'vim-ruby/vim-ruby', {
 			\	'autoload' : {
 			\		'filetypes' : ['ruby', 'erb'],
 			\	},
 			\}
-NeoBundle 'chase/vim-ansible-yaml'
+"NeoBundle 'chase/vim-ansible-yaml'
 NeoBundleLazy 'davidhalter/jedi-vim', {
 			\ 'autoload': {
 			\   'filetypes': ['python', 'python3', 'djangohtml'],
@@ -112,7 +113,7 @@ NeoBundleLazy 'davidhalter/jedi-vim', {
 			\   'mac': 'pip install jedi',
 			\   'unix': 'pip install jedi',
 			\}}
-NeoBundle 'sophacles/vim-bundle-mako'
+"NeoBundle 'sophacles/vim-bundle-mako'
 NeoBundleLazy 'amirh/HTML-AutoCloseTag', {
 			\	'autoload' : {
 			\		'filetypes' : ['html'],
@@ -125,14 +126,14 @@ NeoBundleLazy 'vim-scripts/openscad.vim', {
 			\}
 NeoBundle 'edsono/vim-matchit'
 NeoBundle 'fuenor/im_control.vim'
-NeoBundle 'tokoro10g/matx-vim'
+"NeoBundle 'tokoro10g/matx-vim'
 NeoBundle 'embear/vim-localvimrc'
 NeoBundleLazy 'peterhoeg/vim-qml', {
 			\	'autoload' : {
 			\		'filetypes' : ['qml'],
 			\	},
 			\}
-NeoBundleLazy 'mfumi/unite-mpc'
+"NeoBundleLazy 'mfumi/unite-mpc'
 NeoBundleLazy 'supermomonga/jazzradio.vim', { 'depends' : [ 'Shougo/unite.vim' ] }
 if neobundle#tap('jazzradio.vim')
 	call neobundle#config({

@@ -30,6 +30,8 @@ assign [class="Firefox"] 2:web
 assign [class="Thunderbird"] 2:web
 assign [class="com-mathworks-.*"] 6:lab
 
+workspace 10:out output VGA1
+
 # auto start
 exec --no-startup-id nm-applet
 exec --no-startup-id ~/setbg.sh
@@ -99,7 +101,7 @@ bindsym $mod+6 workspace 6:lab
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+0 workspace 10:out
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1:work
@@ -111,7 +113,7 @@ bindsym $mod+Shift+6 move container to workspace 6:lab
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+0 move container to workspace 10:out
 
 # handle workspaces for multiple screens (xmonad-like behavior)
 bindsym $mod+w focus output left

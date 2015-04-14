@@ -3,7 +3,7 @@ if has("gui_running")
 endif
 let g:dwm_master_pane_width=(&columns*3)/4
 
-augroup my_dwm
+augroup dwm_au
 	autocmd!
 	autocmd VimResized * :call DWM_mod_align()
 augroup END

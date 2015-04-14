@@ -51,7 +51,11 @@ let g:foldcolumn_enabled_columns=5
 set fillchars=vert:\|
 
 " Checking for typo.
-autocmd BufWriteCmd *[,*] call s:write_check_typo(expand('<afile>'))
+augroup checktypo
+	autocmd!
+	autocmd BufWriteCmd *[,*] call s:write_check_typo(expand('<afile>'))
+augroup END
+
 function! s:write_check_typo(file)
 	let writecmd = 'write'.(v:cmdbang ? '!' : '').' '.a:file
 	if exists('b:write_check_typo_nocheck')

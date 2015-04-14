@@ -5,7 +5,11 @@ nnoremap <silent> zd :<C-u>Unite dwm<CR>
 nnoremap <silent> mm :<C-u>Unite build:!<CR>
 nnoremap <silent> mo :<C-u>Unite outline<CR>
 
-autocmd FileType unite call s:unite_my_settings()
+augroup unite_au
+	autocmd!
+	autocmd FileType unite call s:unite_my_settings()
+augroup END
+
 function! s:unite_my_settings()
 	nnoremap <silent> <buffer> <expr> <C-O> unite#do_action('vimfiler')
 	inoremap <silent> <buffer> <expr> <C-O> unite#do_action('vimfiler')

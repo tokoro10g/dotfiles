@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
-ZSH_THEME="agnoster_molokai"
+ZSH_THEME="ys"
 
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="false"

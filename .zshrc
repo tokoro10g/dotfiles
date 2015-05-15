@@ -23,6 +23,7 @@ alias zshconfig="vim ~/.zshrc"
 alias vimrc="vim ~/.vimrc"
 alias open="xdg-open"
 alias dmesg="dmesg --color=always"
+alias lm="latexmk -pvc -halt-on-error"
 alias :q="exit"
 
 export GOPATH=$HOME/go

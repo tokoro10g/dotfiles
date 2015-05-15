@@ -17,3 +17,4 @@ type_engine = xft
 gamma = 100
 logsize = unlimited
 static_backscroll_mode = true
+blink_cursor = true

@@ -160,6 +160,8 @@ NeoBundle 'deton/jasegment.vim'
 
 NeoBundle 'sudo.vim'
 
+NeoBundle 'morhetz/gruvbox'
+
 " Neta Plugins
 NeoBundle 'supermomonga/shaberu.vim'
 "NeoBundle 'rbtnn/puyo.vim'

@@ -8,4 +8,3 @@ nmap <M-n> <Plug>DWMNew
 nmap <M-d> <Plug>DWMClose
 nmap <M-j> <C-w>w
 nmap <M-k> <C-w>W
-nmap <M--> :call DWM_mod_align()<CR>

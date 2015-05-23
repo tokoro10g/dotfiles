@@ -5,9 +5,6 @@
 
 if !1 | finish | endif
 
-"""""""""""
-" Bundles "
-"""""""""""
 " Using NeoBundle Environment
 if has('vim_starting')
 	set nocompatible
@@ -16,166 +13,139 @@ endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 
-NeoBundleFetch 'Shougo/neobundle.vim'
+if neobundle#load_cache()
+	" Bundles {{{
+	
+	" Shougo-Wares {{{
+	NeoBundleFetch 'Shougo/neobundle.vim'
+	
+	NeoBundle 'Shougo/vimproc', {
+				\ 'build' : {
+				\ 'windows' : 'make -f make_mingw32.mak',
+				\ 'cygwin' : 'make -f make_cygwin.mak',
+				\ 'mac' : 'make -f make_mac.mak',
+				\ 'unix' : 'make -f make_unix.mak',
+				\ },
+				\ }
+	NeoBundle 'Shougo/vimshell'
+	NeoBundle 'Shougo/vimfiler'
+	if has('lua')
+		NeoBundle 'Shougo/neocomplete'
+	else
+		NeoBundle 'Shougo/neocomplcache'
+		NeoBundle 'JazzCore/neocomplcache-ultisnips'
+	endif
+	NeoBundle 'Shougo/neossh.vim'
+	NeoBundleLazy 'Shougo/context_filetype.vim'
+	" }}}
 
-NeoBundle 'Shougo/vimproc', {
-			\ 'build' : {
-			\ 'windows' : 'make -f make_mingw32.mak',
-			\ 'cygwin' : 'make -f make_cygwin.mak',
-			\ 'mac' : 'make -f make_mac.mak',
-			\ 'unix' : 'make -f make_unix.mak',
-			\ },
-			\ }
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'Shougo/vimfiler'
-if has('lua')
-	NeoBundle 'Shougo/neocomplete'
-else
-	NeoBundle 'Shougo/neocomplcache'
-	NeoBundle 'JazzCore/neocomplcache-ultisnips'
+	" Unite {{{
+	NeoBundle 'Shougo/unite.vim'
+	NeoBundle 'Shougo/unite-build'
+	NeoBundle 'Shougo/unite-outline'
+	NeoBundle 'kannokanno/unite-dwm'
+	NeoBundle 'osyo-manga/unite-quickfix'
+	" }}}
+
+	" Snippet {{{
+	NeoBundle 'SirVer/ultisnips'
+	NeoBundle 'honza/vim-snippets'
+	"NeoBundle 'Shougo/neosnippet.vim'
+	"NeoBundle 'Shougo/neosnippet-snippets'
+	" }}}
+
+	" Syntax {{{
+	NeoBundle 'groenewege/vim-less'
+	NeoBundle 'octol/vim-cpp-enhanced-highlight'
+	NeoBundle 'vim-jp/cpp-vim'
+	NeoBundleLazy 'Rip-Rip/clang_complete', {
+				\	'autoload': {
+				\		'filetypes' : ["c","cpp"]
+				\	},
+				\	'build' : {
+				\		'others' : "make",
+				\	},
+				\}
+	NeoBundleLazy 'jelera/vim-javascript-syntax', { 'autoload' : { 'filetypes' : ['javascript'] } }
+	NeoBundleLazy 'othree/javascript-libraries-syntax.vim', { 'autoload' : { 'filetypes' : ['javascript'] } }
+	NeoBundleLazy 'othree/html5.vim', { 'autoload' : { 'filetypes' : ['html', 'ejs'] } }
+	NeoBundleLazy 'amirh/HTML-AutoCloseTag', { 'autoload' : { 'filetypes' : ['html'] } }
+	NeoBundleLazy 'plasticboy/vim-markdown', { 'autoload' : { 'filetypes' : ['mkd'] } }
+	NeoBundleLazy 'PProvost/vim-markdown-jekyll', { 'autoload' : { 'filetypes' : ['mkd'] } }
+	NeoBundleLazy 'vim-ruby/vim-ruby', { 'autoload' : { 'filetypes' : ['ruby', 'erb'] } }
+	NeoBundle 'marijnh/tern_for_vim', { 'build': { 'others': 'npm install' } }
+	NeoBundleLazy 'davidhalter/jedi-vim', {
+				\ 'autoload': {
+				\   'filetypes': ['python', 'python3', 'djangohtml'],
+				\ },
+				\ 'build': {
+				\   'mac': 'pip install jedi',
+				\   'unix': 'pip install jedi',
+				\}}
+	NeoBundleLazy 'vim-scripts/openscad.vim', { 'autoload' : { 'filetypes' : ['openscad'] } }
+	NeoBundleLazy 'peterhoeg/vim-qml', { 'autoload' : { 'filetypes' : ['qml'] } }
+	NeoBundleLazy 'octave.vim--', {'autoload' : { 'filetypes' : ['octave'] } }
+	"NeoBundleLazy 'tokoro10g/matx-vim'
+	" }}}
+
+	" Motion {{{
+	NeoBundle 'supasorn/vim-easymotion'
+	NeoBundle 'rhysd/clever-f.vim'
+	NeoBundle 'kana/vim-textobj-user'
+	NeoBundle 'kana/vim-textobj-indent'
+	" }}}
+
+	" Colorscheme
+	NeoBundle 'morhetz/gruvbox'
+
+	" Very Benry {{{
+	NeoBundleLazy 'supermomonga/jazzradio.vim', { 'depends' : [ 'Shougo/unite.vim' ] }
+	NeoBundle 'sudo.vim'
+	NeoBundle 'embear/vim-localvimrc'
+	NeoBundle 'deton/jasegment.vim'
+	NeoBundle 'osyo-manga/vim-over'
+	NeoBundle 'spolu/dwm.vim'
+	NeoBundle 'bling/vim-airline'
+	NeoBundle 'lilydjwg/colorizer'
+	NeoBundle 'osyo-manga/vim-anzu'
+	NeoBundle 'surround.vim'
+	NeoBundle 'suan/vim-instant-markdown'
+	NeoBundle 'LeafCage/foldCC'
+	NeoBundle 'osyo-manga/vim-precious'
+	NeoBundle 'edsono/vim-matchit'
+	NeoBundle 'thinca/vim-quickrun'
+	"NeoBundle 'scrooloose/syntastic'
+	NeoBundle 'osyo-manga/vim-watchdogs'
+	NeoBundle 'tpope/vim-fugitive'
+	NeoBundle 'jmcantrell/vim-virtualenv'
+	"NeoBundle 'gerw/vim-latex-suite'
+	NeoBundle 'godlygeek/tabular'
+	" }}}
+	
+	" Neta Plugins {{{
+	NeoBundleLazy 'supermomonga/shaberu.vim'
+	"NeoBundle 'rbtnn/puyo.vim'
+	"NeoBundle 'thinca/vim-portal'
+	"NeoBundle 'boolfool/vim-sudden-death'
+	" }}}
+	
+	" TweetVim {{{
+	NeoBundleLazy 'mattn/webapi-vim'
+	NeoBundleLazy 'basyura/twibill.vim'
+	NeoBundleLazy 'tyru/open-browser.vim'
+	NeoBundleLazy 'mattn/favstar-vim'
+	NeoBundleLazy 'basyura/TweetVim'
+	"NeoBundle 'tokoro10g/vim-miscmisc'
+	" }}}
+
+	" }}}
+
+	NeoBundleSaveCache
 endif
-NeoBundle 'Shougo/unite-build'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neossh.vim'
-"NeoBundle 'Shougo/neosnippet'
-"NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'honza/vim-snippets'
-NeoBundle 'groenewege/vim-less'
-NeoBundle 'octol/vim-cpp-enhanced-highlight'
-NeoBundle 'vim-jp/cpp-vim'
-NeoBundleLazy 'Rip-Rip/clang_complete', {
-			\	'autoload': {
-			\		'filetypes' : ["c","cpp"]
-			\	},
-			\	'build' : {
-			\		'windows' : "make",
-			\		'cygwin' : "make",
-			\		'mac' : "make",
-			\		'unix' : "make",
-			\	},
-			\}
-NeoBundleLazy 'jelera/vim-javascript-syntax', {
-			\	'autoload' : {
-			\		'filetypes' : ['javascript'],
-			\	},
-			\}
-NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {
-			\	'autoload' : {
-			\		'filetypes' : ['javascript'],
-			\	},
-			\}
-NeoBundle 'spolu/dwm.vim'
-NeoBundle 'kannokanno/unite-dwm'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'lilydjwg/colorizer'
-"NeoBundle 'pasela/unite-webcolorname'
-NeoBundle 'osyo-manga/vim-anzu'
-NeoBundle 'surround.vim'
-NeoBundle 'supasorn/vim-easymotion'
-NeoBundle 'rhysd/clever-f.vim'
-"NeoBundle 'scrooloose/syntastic'
-NeoBundle 'osyo-manga/vim-watchdogs'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-pathogen'
-NeoBundle 'osyo-manga/unite-quickfix'
-NeoBundle 'tokoro10g/vim-miscmisc'
-NeoBundle 'Shougo/unite-outline'
-NeoBundle 'jmcantrell/vim-virtualenv'
-NeoBundle 'thinca/vim-quickrun'
-"NeoBundle 'gerw/vim-latex-suite'
-NeoBundle 'godlygeek/tabular'
-NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'PProvost/vim-markdown-jekyll'
-NeoBundle 'suan/vim-instant-markdown'
-NeoBundle 'LeafCage/foldCC'
-NeoBundle 'kana/vim-textobj-user'
-NeoBundle 'kana/vim-textobj-indent'
-NeoBundleLazy 'Shougo/context_filetype.vim'
-NeoBundle 'osyo-manga/vim-precious'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'marijnh/tern_for_vim', {
-			\ 'build': {
-			\   'others': 'npm install'
-			\}}
-NeoBundle 'justinmk/vim-syntax-extra'
-NeoBundle 'vim-ruby/vim-ruby', {
-			\	'autoload' : {
-			\		'filetypes' : ['ruby', 'erb'],
-			\	},
-			\}
-"NeoBundle 'chase/vim-ansible-yaml'
-NeoBundleLazy 'davidhalter/jedi-vim', {
-			\ 'autoload': {
-			\   'filetypes': ['python', 'python3', 'djangohtml'],
-			\ },
-			\ 'build': {
-			\   'mac': 'pip install jedi',
-			\   'unix': 'pip install jedi',
-			\}}
-"NeoBundle 'sophacles/vim-bundle-mako'
-NeoBundleLazy 'amirh/HTML-AutoCloseTag', {
-			\	'autoload' : {
-			\		'filetypes' : ['html'],
-			\	},
-			\}
-NeoBundleLazy 'vim-scripts/openscad.vim', {
-			\	'autoload' : {
-			\		'filetypes' : ['openscad'],
-			\	},
-			\}
-NeoBundle 'edsono/vim-matchit'
-NeoBundle 'fuenor/im_control.vim'
-"NeoBundle 'tokoro10g/matx-vim'
-NeoBundle 'embear/vim-localvimrc'
-NeoBundleLazy 'peterhoeg/vim-qml', {
-			\	'autoload' : {
-			\		'filetypes' : ['qml'],
-			\	},
-			\}
-"NeoBundleLazy 'mfumi/unite-mpc'
-NeoBundleLazy 'supermomonga/jazzradio.vim', { 'depends' : [ 'Shougo/unite.vim' ] }
-if neobundle#tap('jazzradio.vim')
-	call neobundle#config({
-				\	'autoload' : {
-				\		'unite_sources' : [
-				\			'jazzradio'
-				\		],
-				\		'commands' : [
-				\			'JazzradioUpdateChannels',
-				\			'JazzradioStop',
-				\			{
-				\				'name' : 'JazzradioPlay',
-				\				'complete' : 'customlist,jazzradio#channel_id_complete'
-				\			}
-				\		],
-				\		'function_prefix' : 'jazzradio'
-				\	}
-				\})
-endif
-NeoBundle 'octave.vim--'
-NeoBundle 'osyo-manga/vim-over'
-
-NeoBundle 'deton/jasegment.vim'
-
-NeoBundle 'sudo.vim'
-
-NeoBundle 'morhetz/gruvbox'
-
-" Neta Plugins
-NeoBundle 'supermomonga/shaberu.vim'
-"NeoBundle 'rbtnn/puyo.vim'
-"NeoBundle 'thinca/vim-portal'
-"NeoBundle 'boolfool/vim-sudden-death'
-
-" TweetVim
-NeoBundleLazy 'mattn/webapi-vim'
-NeoBundleLazy 'basyura/twibill.vim'
-NeoBundleLazy 'tyru/open-browser.vim'
-NeoBundleLazy 'mattn/favstar-vim'
-NeoBundleLazy 'basyura/TweetVim'
 
 call neobundle#end()
+
+NeoBundleCheck
 
 " Custom settings
 set runtimepath+=~/.vim/custom
@@ -183,7 +153,5 @@ runtime! custom/vimrc/*.vim
 runtime! custom/vimrc/plugin/*.vim
 runtime! custom/vimrc/plugin/keybind/*.vim
 
-NeoBundleCheck
-
 " finally
-syntax on
+syntax enable

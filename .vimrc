@@ -43,6 +43,8 @@ if neobundle#load_cache()
 	NeoBundle 'Shougo/unite.vim'
 	NeoBundle 'Shougo/unite-build'
 	NeoBundle 'Shougo/unite-outline'
+	NeoBundle 'Shougo/neomru.vim'
+	NeoBundle 'Shougo/tabpagebuffer.vim'
 	NeoBundle 'kannokanno/unite-dwm'
 	NeoBundle 'osyo-manga/unite-quickfix'
 	" }}}

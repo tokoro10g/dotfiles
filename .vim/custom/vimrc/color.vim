@@ -11,4 +11,4 @@ set background=dark
 
 au FileType tex hi Conceal guifg=#FFFFFF guibg=#444444
 
-syntax on
+syntax enable

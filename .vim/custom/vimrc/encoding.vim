@@ -3,6 +3,7 @@ if &encoding !=# 'utf-8'
 	set encoding=japan
 	set fileencoding=japan
 endif
+
 if has('iconv')
 	let s:enc_euc = 'euc-jp'
 	let s:enc_jis = 'iso-2022-jp'
@@ -35,15 +36,16 @@ if has('iconv')
 	unlet s:enc_euc
 	unlet s:enc_jis
 endif
-if has('autocmd')
-	function! AU_ReCheck_FENC()
-		if &fileencoding =~# 'iso-2022-jp' && search("[^\x01-\x7e]", 'n') == 0
-			let &fileencoding=&encoding
-		endif
-	endfunction
-	augroup encoding
-		autocmd!
-		autocmd BufReadPost * call AU_ReCheck_FENC()
-	augroup END
-endif
+
+function! AU_ReCheck_FENC()
+	if &fileencoding =~# 'iso-2022-jp' && search("[^\x01-\x7e]", 'n') == 0
+		let &fileencoding=&encoding
+	endif
+endfunction
+
+augroup encoding
+	autocmd!
+	autocmd BufReadPost * call AU_ReCheck_FENC()
+augroup END
+
 set fileformats=unix,dos,mac

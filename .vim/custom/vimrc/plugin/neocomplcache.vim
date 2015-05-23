@@ -1,5 +1,5 @@
 " neocomplcache
-if neobundle#is_sourced("neocomplcache")
+if neobundle#tap('neocomplcache')
 	let g:neocomplcache_enable_at_startup=1
 	let g:neocomplcache_auto_completion_start_length=3
 	let g:neocomplcache_min_keyword_length=2
@@ -18,4 +18,6 @@ if neobundle#is_sourced("neocomplcache")
 		let g:neocomplcache_keyword_patterns={}
 	endif
 	let g:neocomplcache_keyword_patterns['default']='\h\w*'
+
+	call neobundle#untap()
 endif

@@ -23,6 +23,7 @@ font pango:Ubuntu Regular 9
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+for_window [class="mlterm" instance="mlterm"] floating disable
 for_window [class="MATLAB.*" instance="sun-awt-X11-XFramePeer"] floating enable
 
 # assign some applications

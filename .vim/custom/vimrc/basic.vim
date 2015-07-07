@@ -47,7 +47,11 @@ set matchpairs& matchpairs+=<:>
 
 set nowritebackup
 set nobackup
-set noswapfile
+
+if !isdirectory($HOME.'/.vim/swap')
+  call mkdir($HOME.'/.vim/swap', 'p')
+endif
+set directory=~/.vim/swap
 
 if !isdirectory($HOME.'/.vim/undo')
 	call mkdir($HOME.'/.vim/undo', 'p')

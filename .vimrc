@@ -5,6 +5,11 @@
 
 if !1 | finish | endif
 
+set encoding=utf-8
+
+"""""""""""
+" Bundles "
+"""""""""""
 " Using NeoBundle Environment
 if has('vim_starting')
 	set nocompatible

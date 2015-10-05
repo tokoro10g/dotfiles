@@ -126,6 +126,7 @@ if neobundle#load_cache()
 	NeoBundle 'tpope/vim-fugitive'
 	NeoBundle 'jmcantrell/vim-virtualenv'
 	"NeoBundle 'gerw/vim-latex-suite'
+	NeoBundle 'lervag/vimtex'
 	NeoBundle 'godlygeek/tabular'
 	" }}}
 	

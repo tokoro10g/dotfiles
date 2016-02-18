@@ -128,6 +128,7 @@ if neobundle#load_cache()
 	"NeoBundle 'gerw/vim-latex-suite'
 	NeoBundle 'lervag/vimtex'
 	NeoBundle 'godlygeek/tabular'
+	NeoBundle 'LargeFile'
 	" }}}
 	
 	" Neta Plugins {{{

@@ -3,7 +3,12 @@
 "         Tokoro (@tokoro10g)  "
 """"""""""""""""""""""""""""""""
 
-if !1 | finish | endif
+if 0 | endif
+
+if &compatible
+	set nocompatible               " Be iMproved
+endif
+set runtimepath+=~/.vim/bundle/neobundle.vim/
 
 set encoding=utf-8
 
@@ -11,10 +16,6 @@ set encoding=utf-8
 " Bundles "
 """""""""""
 " Using NeoBundle Environment
-if has('vim_starting')
-	set nocompatible
-	set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 
@@ -107,7 +108,7 @@ if neobundle#load_cache()
 	NeoBundle 'morhetz/gruvbox'
 
 	" Very Benry {{{
-	NeoBundleLazy 'supermomonga/jazzradio.vim', { 'depends' : [ 'Shougo/unite.vim' ] }
+	"NeoBundleLazy 'supermomonga/jazzradio.vim'
 	NeoBundle 'sudo.vim'
 	NeoBundle 'embear/vim-localvimrc'
 	NeoBundle 'deton/jasegment.vim'

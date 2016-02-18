@@ -115,6 +115,7 @@ if neobundle#load_cache()
 	NeoBundle 'osyo-manga/vim-over'
 	NeoBundle 'spolu/dwm.vim'
 	NeoBundle 'bling/vim-airline'
+	NeoBundle 'vim-airline/vim-airline-themes'
 	NeoBundle 'lilydjwg/colorizer'
 	NeoBundle 'osyo-manga/vim-anzu'
 	NeoBundle 'surround.vim'

@@ -42,6 +42,7 @@ if neobundle#load_cache()
 	endif
 	NeoBundle 'Shougo/neossh.vim'
 	NeoBundleLazy 'Shougo/context_filetype.vim'
+	NeoBundle 'Shougo/vinarise.vim'
 	" }}}
 
 	" Unite {{{

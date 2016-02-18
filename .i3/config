@@ -184,7 +184,7 @@ client.urgent #383a3b #383a3b #ee0000
 # border / titlebar
 new_window normal
 hide_edge_borders vertical
-bindsym Control+Shift+x [class="^.*"] border toggle
+bindsym $mod+x [class="^.*"] border toggle
 for_window [class="^.*"] border pixel 1
 for_window [class="mlterm"] border normal
 

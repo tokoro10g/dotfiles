@@ -27,7 +27,7 @@ alias lm="latexmk -pvc -halt-on-error"
 alias :q="exit"
 
 export TERM=mlterm
-export GOPATH=$HOME/go
+export GOPATH=$HOME/dev/go
 export PATH=$HOME/bin:/usr/local/bin:$GOPATH/bin:$PATH
 export EDITOR='vim'
 export KIGITHUB=https://github.com/KiCad

@@ -132,6 +132,7 @@ if neobundle#load_cache()
 	NeoBundle 'lervag/vimtex'
 	NeoBundle 'godlygeek/tabular'
 	NeoBundle 'LargeFile'
+	NeoBundle 'rhysd/vim-grammarous'
 	" }}}
 	
 	" Neta Plugins {{{

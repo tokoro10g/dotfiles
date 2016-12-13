@@ -28,7 +28,7 @@ alias :q="exit"
 
 export TERM=mlterm
 export GOPATH=$HOME/dev/go
-export PATH=$HOME/bin:/usr/local/bin:$GOPATH/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$GOPATH/bin:$HOME/.npm/bin:$PATH
 export EDITOR='vim'
 export KIGITHUB=https://github.com/KiCad
 

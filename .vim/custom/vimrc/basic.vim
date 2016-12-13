@@ -92,6 +92,7 @@ endfunction
 
 if has('conceal')
 	set conceallevel=2 concealcursor=
+	let g:tex_conceal = ""
 endif
 
 "set ambiwidth=double

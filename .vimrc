@@ -19,7 +19,7 @@ set encoding=utf-8
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 
-if neobundle#load_cache()
+"if neobundle#load_cache()
 	" Bundles {{{
 	
 	" Shougo-Wares {{{
@@ -59,14 +59,9 @@ if neobundle#load_cache()
 	" Snippet {{{
 	NeoBundle 'SirVer/ultisnips'
 	NeoBundle 'honza/vim-snippets'
-	"NeoBundle 'Shougo/neosnippet.vim'
-	"NeoBundle 'Shougo/neosnippet-snippets'
 	" }}}
 
 	" Syntax {{{
-	NeoBundle 'groenewege/vim-less'
-	NeoBundle 'octol/vim-cpp-enhanced-highlight'
-	NeoBundle 'vim-jp/cpp-vim'
 	NeoBundleLazy 'Rip-Rip/clang_complete', {
 				\	'autoload': {
 				\		'filetypes' : ["c","cpp"]
@@ -75,30 +70,14 @@ if neobundle#load_cache()
 				\		'others' : "make",
 				\	},
 				\}
-	NeoBundleLazy 'jelera/vim-javascript-syntax', { 'autoload' : { 'filetypes' : ['javascript'] } }
-	NeoBundleLazy 'othree/javascript-libraries-syntax.vim', { 'autoload' : { 'filetypes' : ['javascript'] } }
-	NeoBundleLazy 'othree/html5.vim', { 'autoload' : { 'filetypes' : ['html', 'ejs'] } }
-	NeoBundleLazy 'amirh/HTML-AutoCloseTag', { 'autoload' : { 'filetypes' : ['html'] } }
+	NeoBundle 'davidhalter/jedi-vim'
 	NeoBundleLazy 'plasticboy/vim-markdown', { 'autoload' : { 'filetypes' : ['mkd'] } }
 	NeoBundleLazy 'PProvost/vim-markdown-jekyll', { 'autoload' : { 'filetypes' : ['mkd'] } }
-	NeoBundleLazy 'vim-ruby/vim-ruby', { 'autoload' : { 'filetypes' : ['ruby', 'erb'] } }
-	NeoBundle 'marijnh/tern_for_vim', { 'build': { 'others': 'npm install' } }
-	NeoBundleLazy 'davidhalter/jedi-vim', {
-				\ 'autoload': {
-				\   'filetypes': ['python', 'python3', 'djangohtml'],
-				\ },
-				\ 'build': {
-				\   'mac': 'pip install jedi',
-				\   'unix': 'pip install jedi',
-				\}}
 	NeoBundleLazy 'vim-scripts/openscad.vim', { 'autoload' : { 'filetypes' : ['openscad'] } }
-	NeoBundleLazy 'peterhoeg/vim-qml', { 'autoload' : { 'filetypes' : ['qml'] } }
 	NeoBundleLazy 'octave.vim--', {'autoload' : { 'filetypes' : ['octave'] } }
-	"NeoBundleLazy 'tokoro10g/matx-vim'
 	" }}}
 
 	" Motion {{{
-	NeoBundle 'supasorn/vim-easymotion'
 	NeoBundle 'rhysd/clever-f.vim'
 	NeoBundle 'kana/vim-textobj-user'
 	NeoBundle 'kana/vim-textobj-indent'
@@ -108,53 +87,44 @@ if neobundle#load_cache()
 	NeoBundle 'morhetz/gruvbox'
 
 	" Very Benry {{{
-	"NeoBundleLazy 'supermomonga/jazzradio.vim'
 	NeoBundle 'sudo.vim'
-	NeoBundle 'embear/vim-localvimrc'
 	NeoBundle 'deton/jasegment.vim'
-	NeoBundle 'osyo-manga/vim-over'
 	NeoBundle 'spolu/dwm.vim'
 	NeoBundle 'bling/vim-airline'
 	NeoBundle 'vim-airline/vim-airline-themes'
 	NeoBundle 'lilydjwg/colorizer'
 	NeoBundle 'osyo-manga/vim-anzu'
-	NeoBundle 'surround.vim'
-	NeoBundle 'suan/vim-instant-markdown'
 	NeoBundle 'LeafCage/foldCC'
 	NeoBundle 'osyo-manga/vim-precious'
-	NeoBundle 'edsono/vim-matchit'
 	NeoBundle 'thinca/vim-quickrun'
-	"NeoBundle 'scrooloose/syntastic'
 	NeoBundle 'osyo-manga/vim-watchdogs'
 	NeoBundle 'tpope/vim-fugitive'
 	NeoBundle 'jmcantrell/vim-virtualenv'
-	"NeoBundle 'gerw/vim-latex-suite'
 	NeoBundle 'lervag/vimtex'
-	NeoBundle 'godlygeek/tabular'
 	NeoBundle 'LargeFile'
-	NeoBundle 'rhysd/vim-grammarous'
+	NeoBundle 'tyru/eskk.vim'
 	" }}}
 	
 	" Neta Plugins {{{
-	NeoBundleLazy 'supermomonga/shaberu.vim'
+	"NeoBundleLazy 'supermomonga/shaberu.vim'
 	"NeoBundle 'rbtnn/puyo.vim'
 	"NeoBundle 'thinca/vim-portal'
 	"NeoBundle 'boolfool/vim-sudden-death'
 	" }}}
 	
 	" TweetVim {{{
-	NeoBundleLazy 'mattn/webapi-vim'
-	NeoBundleLazy 'basyura/twibill.vim'
-	NeoBundleLazy 'tyru/open-browser.vim'
-	NeoBundleLazy 'mattn/favstar-vim'
-	NeoBundleLazy 'basyura/TweetVim'
+	"NeoBundleLazy 'mattn/webapi-vim'
+	"NeoBundleLazy 'basyura/twibill.vim'
+	"NeoBundleLazy 'tyru/open-browser.vim'
+	"NeoBundleLazy 'mattn/favstar-vim'
+	"NeoBundleLazy 'basyura/TweetVim'
 	"NeoBundle 'tokoro10g/vim-miscmisc'
 	" }}}
 
 	" }}}
 
-	NeoBundleSaveCache
-endif
+	"NeoBundleSaveCache
+"endif
 
 call neobundle#end()
 

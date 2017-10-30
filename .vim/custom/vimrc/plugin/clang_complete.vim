@@ -9,6 +9,7 @@ let g:clang_conceal_snippets=1
 let g:clang_trailing_placeholder=1
 let g:clang_make_default_keymappings=1
 let g:clang_debug=1
+let g:clang_use_library=1
 "let g:clang_close_preview=0
 "let g:clang_user_options='-std=c++11 ' .
 "			\'-I/usr/include '.

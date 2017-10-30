@@ -14,30 +14,38 @@ if neobundle#tap('neocomplete')
 				\ 'vimshell' : $HOME.'/.vimshell_hist'
 				\ }
 	let g:neocomplete#force_overwrite_completefunc=1
+
 	if !exists('g:neocomplete#force_omni_input_patterns')
 		let g:neocomplete#force_omni_input_patterns={}
 	endif
+	if !exists('g:neocomplete#sources#omni#input_patterns')
+		let g:neocomplete#sources#omni#input_patterns = {}
+	endif
+	if !exists('g:neocomplete#sources#omni#functions')
+		let g:neocomplete#sources#omni#functions={}
+	endif
+	if !exists('g:neocomplete#keyword_patterns')
+		let g:neocomplete#keyword_patterns={}
+	endif
+
 	let g:neocomplete#force_omni_input_patterns.ruby='[^. *\t]\.\w*\|\h\w*::'
 	let g:neocomplete#force_omni_input_patterns.php='[^. \t]->\h\w*\|\h\w*::'
 	let g:neocomplete#force_omni_input_patterns.c='[^.[:digit:] *\t]\%(\.\|->\)'
 	let g:neocomplete#force_omni_input_patterns.cpp='[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 	let g:neocomplete#force_omni_input_patterns.python='\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
 
-	if !exists('g:neocomplete#sources#omni#functions')
-		let g:neocomplete#sources#omni#functions={}
-	endif
+	let g:neocomplete#sources#omni#input_patterns.ruby='[^. *\t]\.\h\w*\|\h\w*::'
+	let g:neocomplete#sources#omni#input_patterns.eruby='[^. *\t]\.\h\w*\|\h\w*::'
+	let g:neocomplete#sources#omni#input_patterns.tex =
+				\ '\v\\%('
+				\ . '\a*%(ref|cite)\a*%(\s*\[[^]]*\])?\s*\{[^{}]*'
+				\ . '|includegraphics%(\s*\[[^]]*\])?\s*\{[^{}]*'
+				\ . '|%(include|input)\s*\{[^{}]*'
+				\ . ')'
+
 	let g:neocomplete#sources#omni#functions.ruby='rubycomplete#Complete'
 	let g:neocomplete#sources#omni#functions.eruby='rubycomplete#Complete'
 
-	if !exists('g:neocomplete#sources#omni#input_patterns')
-		let g:neocomplete#sources#omni#input_patterns={}
-	endif
-	let g:neocomplete#sources#omni#input_patterns.ruby='[^. *\t]\.\h\w*\|\h\w*::'
-	let g:neocomplete#sources#omni#input_patterns.eruby='[^. *\t]\.\h\w*\|\h\w*::'
-
-	if !exists('g:neocomplete#keyword_patterns')
-		let g:neocomplete#keyword_patterns={}
-	endif
 	let g:neocomplete#keyword_patterns['default']='\h\w*'
 
 	call neobundle#untap()

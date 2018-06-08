@@ -1,0 +1,27 @@
+" vim-airline
+let g:unite_force_overwrite_statusline = 0
+let g:vimfiler_force_overwrite_statusline = 0
+let g:airline_powerline_fonts=1
+let g:airline_theme='powerlineish'
+let g:airline_detect_modified=1
+let g:airline_enable_hanks=0
+let g:airline#extensions#disable_rtp_load = 1
+let g:airline#extensions#syntastic#enabled = 0
+let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#showbuffers = 0
+let g:airline#extensions#branch#enabled = 0
+let g:airline#extensions#virtualenv#enabled = 0
+let g:airline#extensions#bufferline#enabled = 0
+let g:airline#extensions#csv#enabled = 0
+let g:airline#extensions#hunks#enabled = 0
+let g:airline#extensions#eclim#enabled = 0
+let g:airline#extensions#wordcount#enabled = 0
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#nrrwrgn#enabled = 0
+let g:airline#extensions#capslock#enabled = 0
+let g:airline#extensions#windowswap#enabled = 0
+let g:airline#extensions#obsession#enabled = 0
+let g:airline#extensions#taboo#enabled = 0
+let g:airline#extensions#ctrlspace#enabled = 0
+let g:airline#extensions#ycm#enabled = 0
+let g:airline#extensions#po#enabled = 0

@@ -39,6 +39,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('osyo-manga/vim-anzu')
   call dein#add('lervag/vimtex')
   call dein#add('thinca/vim-quickrun')
+  call dein#add('deton/jasegment.vim')
 
   " Required:
   call dein#end()

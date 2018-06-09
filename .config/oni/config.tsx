@@ -15,8 +15,7 @@ export const activate = (oni: Oni.Plugin.Api) => {
 
     //
     // Or remove the default bindings here by uncommenting the below line:
-    //
-    // oni.input.unbind("<c-p>")
+    oni.input.unbind("<c-p>")
 
 }
 

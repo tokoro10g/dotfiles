@@ -11,8 +11,7 @@ exports.activate = function (oni) {
     //})
     //
     // Or remove the default bindings here by uncommenting the below line:
-    //
-    // oni.input.unbind("<c-p>")
+    oni.input.unbind("<c-p>");
 };
 exports.deactivate = function (oni) {
     console.log("config deactivated");

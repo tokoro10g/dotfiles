@@ -5,7 +5,7 @@ let g:vimtex_matchparen_enabled=0
 let g:vimtex_fold_enabled=1
 
 let g:vimtex_compiler_latexmk = {
-	\ 'backend' : 'process',
+	\ 'backend' : 'nvim',
 	\ 'background' : 1,
 	\ 'build_dir' : '',
 	\ 'callback' : 1,

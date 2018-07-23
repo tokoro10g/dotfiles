@@ -28,10 +28,12 @@ export const configuration = {
 
     "oni.bookmarks": ["~/doctor"],
 
+    "autoClosingPairs.enabled": false,
+
     "sidebar.enabled": false,
     "sidebar.default.open": false,
 
-    "editor.clipboard.enabled": false,
+    "editor.clipboard.enabled": true,
     "editor.fontSize": "14px",
     "editor.fontFamily": "Ricty Discord",
     //"editor.fontFamily": "Cica",

@@ -1,0 +1,3 @@
+[submodule ".config/bat/themes/gruvbox-sublime"]
+	path = .config/bat/themes/gruvbox-sublime
+	url = https://github.com/isaachess/gruvbox-sublime.git

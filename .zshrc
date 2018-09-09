@@ -31,5 +31,6 @@ export GOPATH=$HOME/dev/go
 export PATH=$HOME/bin:/usr/local/bin:$GOPATH/bin:$HOME/.npm/bin:$PATH
 export EDITOR='vim'
 export KIGITHUB=https://github.com/KiCad
+export BAT_THEME=Gruvbox
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local

@@ -26,7 +26,7 @@ alias dmesg="dmesg --color=always"
 alias lm="latexmk -pvc -halt-on-error"
 alias :q="exit"
 
-export TERM=mlterm
+export TERM=termite
 export GOPATH=$HOME/dev/go
 export PATH=$HOME/bin:/usr/local/bin:$GOPATH/bin:$HOME/.npm/bin:$PATH
 export EDITOR='vim'

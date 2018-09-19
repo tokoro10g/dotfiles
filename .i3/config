@@ -41,7 +41,7 @@ exec --no-startup-id ~/setbg.sh
 exec --no-startup-id fcitx
 
 # start a terminal
-bindsym $mod+Shift+Return exec mlterm
+bindsym $mod+Shift+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+c kill
@@ -197,4 +197,4 @@ for_window [class="mlterm"] border normal
 # start applications
 exec firefox
 exec thunderbird
-exec sleep 0.5; mlterm
+exec sleep 0.5; termite

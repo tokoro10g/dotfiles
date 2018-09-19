@@ -28,6 +28,11 @@ if dein#load_state('~/.cache/dein')
   call dein#add('Shougo/defx.nvim')
   call dein#add('Shougo/denite.nvim')
   call dein#add('Shougo/deoplete.nvim')
+  call dein#add('w0rp/ale')
+  call dein#add('autozimu/LanguageClient-neovim', {
+      \ 'rev': 'next',
+      \ 'build': 'bash install.sh',
+      \ })
   call dein#add('Shougo/vimproc')
   call dein#add('Shougo/context_filetype.vim')
   call dein#add('osyo-manga/vim-precious')

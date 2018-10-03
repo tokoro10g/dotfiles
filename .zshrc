@@ -24,6 +24,8 @@ alias vimrc="vim ~/.vimrc"
 alias open="xdg-open"
 alias dmesg="dmesg --color=always"
 alias lm="latexmk -pvc -halt-on-error"
+alias adb="sudo adb"
+alias nq="nvim-qt --no-ext-tabline"
 alias :q="exit"
 
 export TERM=termite

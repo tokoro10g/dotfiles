@@ -14,7 +14,7 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="mm/dd/yyyy"
 
 # Load plugins
-plugins=(git vi-mode compleat command-not-found zsh-syntax-highlighting)
+plugins=(git vi-mode compleat command-not-found)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -36,3 +36,5 @@ export KIGITHUB=https://github.com/KiCad
 export BAT_THEME=Gruvbox
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

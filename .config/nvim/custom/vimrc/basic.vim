@@ -30,13 +30,15 @@ set number
 set ttyfast " use fast terminal connection
 set title
 set shortmess& shortmess+=I " hide startup messages
+set signcolumn=yes
 
 set timeoutlen=300
 set updatetime=200
-set completeopt=menuone
+set completeopt=menuone,preview,noinsert,noselect
 
 set tabstop=4
 set shiftwidth=4
+set expandtab
 
 set ignorecase smartcase infercase
 set incsearch

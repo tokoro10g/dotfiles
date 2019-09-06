@@ -27,6 +27,7 @@ for_window [class="mlterm" instance="mlterm"] floating disable
 for_window [class="com-mathworks-.*" instance="sun-awt-X11-XFramePeer"] floating enable
 for_window [class="MATLAB.*" instance="sun-awt-X11-XFramePeer"] floating enable
 for_window [class="MATLAB.*" instance="sun-awt-X11-XWindowPeer"] floating enable
+for_window [class="MATLABWindow"] floating enable
 
 # assign some applications
 assign [class="Firefox"] 2:web

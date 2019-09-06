@@ -28,6 +28,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('Shougo/defx.nvim')
   call dein#add('Shougo/denite.nvim')
   call dein#add('Shougo/deoplete.nvim')
+  call dein#add('Shougo/echodoc.vim')
   "call dein#add('w0rp/ale')
   call dein#add('Chiel92/vim-autoformat')
   call dein#add('autozimu/LanguageClient-neovim', {
@@ -47,6 +48,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('deton/jasegment.vim')
   call dein#add('itchyny/lightline.vim')
   call dein#add('embear/vim-localvimrc')
+  call dein#add('Chiel92/vim-autoformat')
 
   " Required:
   call dein#end()

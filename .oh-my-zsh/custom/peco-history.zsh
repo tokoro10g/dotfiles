@@ -7,7 +7,7 @@ function peco-select-history() {
 	fi
 	BUFFER=$(\history -n 1 | \
 		eval $tac | \
-		TERM=mlterm peco --query "$LBUFFER")
+		TERM=xterm peco --query "$LBUFFER")
 	CURSOR=$#BUFFER
 	zle clear-screen
 }

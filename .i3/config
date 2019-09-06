@@ -142,7 +142,7 @@ bindsym XF86AudioLowerVolume exec amixer -q set Master 2%- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
 
 # lock screen
-bindsym Control+mod1+l exec i3lock-fancy
+bindsym Control+mod1+l exec /bin/sh $HOME/.i3/lock.sh
 
 # take screenshots
 bindsym $mod+F12 exec --no-startup-id scrot 'scrot_%Y%m%d_%I:%M:%S_%p.png' -e 'mv $f ~/Pictures/screenshot/'

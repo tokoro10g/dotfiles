@@ -28,7 +28,8 @@ if dein#load_state('~/.cache/dein')
   call dein#add('Shougo/defx.nvim')
   call dein#add('Shougo/denite.nvim')
   call dein#add('Shougo/deoplete.nvim')
-  call dein#add('w0rp/ale')
+  "call dein#add('w0rp/ale')
+  call dein#add('Chiel92/vim-autoformat')
   call dein#add('autozimu/LanguageClient-neovim', {
       \ 'rev': 'next',
       \ 'build': 'bash install.sh',

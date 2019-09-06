@@ -24,6 +24,7 @@ set laststatus=2
 set showtabline=2
 set backspace=indent,eol,start
 set autoindent smartindent
+set signcolumn=yes
 
 set cursorline
 set number
@@ -37,6 +38,7 @@ set completeopt=menuone
 
 set tabstop=4
 set shiftwidth=4
+set expandtab
 
 set ignorecase smartcase infercase
 set incsearch

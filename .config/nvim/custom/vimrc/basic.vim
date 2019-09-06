@@ -19,12 +19,12 @@ let $TMPDIR = $HOME."/tmp"
 filetype plugin on
 filetype indent on
 
-set showcmd
+set noshowcmd
+set noshowmode
 set laststatus=2
 set showtabline=2
 set backspace=indent,eol,start
 set autoindent smartindent
-set signcolumn=yes
 
 set cursorline
 set number
@@ -32,10 +32,11 @@ set ttyfast " use fast terminal connection
 set title
 set shortmess& shortmess+=I " hide startup messages
 set signcolumn=yes
+set hidden
 
 set timeoutlen=300
 set updatetime=200
-set completeopt=menuone,preview,noinsert,noselect
+set completeopt=menuone,noinsert,noselect
 
 set tabstop=4
 set shiftwidth=4

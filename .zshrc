@@ -28,7 +28,7 @@ alias adb="sudo adb"
 alias nq="nvim-qt --no-ext-tabline"
 alias :q="exit"
 
-export TERM=termite
+export TERM=xterm-color
 export GOPATH=$HOME/dev/go
 export PATH=$HOME/bin:/usr/local/bin:$GOPATH/bin:$HOME/.npm/bin:$PATH
 export EDITOR='vim'

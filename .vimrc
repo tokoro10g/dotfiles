@@ -1,72 +1,79 @@
-""""""""""""""""""""""""""""""""
-" .vimrc                       "
-"         Tokoro (@tokoro10g)  "
-""""""""""""""""""""""""""""""""
+set nocompatible
 
-if 0 | endif
-
-if &compatible
-	set nocompatible               " Be iMproved
-endif
-
-set encoding=utf-8
-
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
-
-if dein#load_state('~/.cache/dein')
-  call dein#begin('~/.cache/dein')
-
-  " Let dein manage dein
-  " Required:
-  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
-
-  if !has('nvim')
-    call dein#add('roxma/nvim-yarp')
-    call dein#add('roxma/vim-hug-neovim-rpc')
-  endif
-
-  call dein#add('Shougo/defx.nvim')
-  call dein#add('Shougo/denite.nvim')
-  call dein#add('Shougo/deoplete.nvim')
-  call dein#add('w0rp/ale')
-  call dein#add('autozimu/LanguageClient-neovim', {
-      \ 'rev': 'next',
-      \ 'build': 'bash install.sh',
-      \ })
-  call dein#add('Shougo/vimproc')
-  call dein#add('Shougo/context_filetype.vim')
-  call dein#add('SirVer/ultisnips')
-  call dein#add('honza/vim-snippets')
-  call dein#add('morhetz/gruvbox')
-  call dein#add('spolu/dwm.vim')
-  call dein#add('bling/vim-airline')
-  call dein#add('vim-airline/vim-airline-themes')
-  call dein#add('osyo-manga/vim-anzu')
-  call dein#add('lervag/vimtex')
-  call dein#add('thinca/vim-quickrun')
-  call dein#add('deton/jasegment.vim')
-
-  " Required:
-  call dein#end()
-  call dein#save_state()
-endif
-
-" If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
-
-"End dein Scripts-------------------------
-
-" Custom settings
-set runtimepath+=~/.vim/custom
-runtime! custom/vimrc/*.vim
-runtime! custom/vimrc/*.nvim
-runtime! custom/vimrc/plugin/*.vim
-runtime! custom/vimrc/plugin/*.nvim
-runtime! custom/vimrc/plugin/keybind/*.vim
-runtime! custom/vimrc/plugin/keybind/*.nvim
-
-" finally
 filetype plugin indent on
-syntax enable
+syntax on
+
+set autoindent
+set expandtab
+set softtabstop=4
+set shiftwidth=4
+set shiftround
+set ruler
+set number
+
+set backspace=indent,eol,start
+set hidden
+set laststatus=2
+set display=lastline
+
+set showmode
+set showcmd
+
+set smartcase
+set incsearch
+set hlsearch
+
+set ttyfast
+set lazyredraw
+
+set splitbelow
+set splitright
+
+set cursorline
+set wrapscan
+set report=0
+set synmaxcol=200
+
+set clipboard&
+set clipboard^=unnamedplus
+
+set backup
+if !isdirectory($HOME."/.vim/files")
+    silent !mkdir -p ~/.vim/files/backup
+    silent !mkdir -p ~/.vim/files/swap
+    silent !mkdir -p ~/.vim/files/undo
+    silent !mkdir -p ~/.vim/files/info
+endif
+set backupdir=$HOME/.vim/files/backup/
+set backupext=-vimbackup
+set backupskip=
+set directory=$HOME/.vim/files/swap/
+set updatecount=100
+set undofile
+set undodir=$HOME/.vim/files/undo/
+set viminfo='100,n$HOME/.vim/files/info/viminfo+
+
+colorscheme slate
+
+" Language-specific settings
+augroup filetypedetect
+    au BufRead,BufNewFile *.launch setfiletype xml
+    au BufRead,BufNewFile *.urdf setfiletype xml
+augroup END
+autocmd Filetype c setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype cpp setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype xml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype yaml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+
+" Highlight trailing whitespaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+call matchadd("ExtraWhitespace", '\s\+$')
+
+" Show hidden characters
+set list
+if has('multi_byte') && &encoding ==# 'utf-8'
+    let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±'
+else
+    let &listchars = 'tab:> ,extends:>,precedes:<,nbsp:.'
+endif

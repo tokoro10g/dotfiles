@@ -1,5 +1,4 @@
 [[ -f ~/.cache/znap/znap.zsh ]] ||
-  mkdir -p ~/.cache
   git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git ~/.cache/znap
 source ~/.cache/znap/znap.zsh
 

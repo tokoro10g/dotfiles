@@ -4,13 +4,13 @@ source ~/.cache/znap/znap.zsh
 
 znap source marlonrichert/zsh-hist
 znap source zsh-users/zsh-autosuggestions
-ZSH_HIGHLIGHT_HIGHLIGHTERS=( main brackets )
-znap source zsh-users/zsh-syntax-highlighting
+znap source zdharma-continuum/fast-syntax-highlighting
 
 plugins=(git vi-mode compleat command-not-found)
 
+ZSH_THEME="ys"
+znap source ohmyzsh/ohmyzsh lib/{git.zsh,theme-and-appearance.zsh}
 znap source ohmyzsh/ohmyzsh oh-my-zsh.sh
-znap prompt ohmyzsh/ohmyzsh ys
 
 # User configuration
 alias open="xdg-open"

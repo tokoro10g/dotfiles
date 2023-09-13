@@ -13,7 +13,9 @@ znap source ohmyzsh/ohmyzsh lib/{git.zsh,theme-and-appearance.zsh}
 znap source ohmyzsh/ohmyzsh oh-my-zsh.sh
 
 # User configuration
-alias open="xdg-open"
+if [ ! "$(uname)" = "Darwin" ]; then
+  alias open="xdg-open"
+fi
 alias dmesg="dmesg --color=always"
 
 export TERM=xterm-color
